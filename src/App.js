@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.scss';
 
 import Popup from './components/Popup/Popup';
 
 function App() {
 
+  const popupRef = useRef(null);
+
+  
   const getPopup = () => {
-    console.log('Estas fuera de pantalla');
+    
+    const valor = popupRef.current;
+    console.log(valor);
+
   }
 
   return (
     <div className="App" onMouseLeave={getPopup}>
 
-        <h1>Popup</h1>
+    
         <div id="wrapper" className="Wrapper">
-          <p><a className="button" onClick={getPopup} href="#popup1">Click Me</a></p>
+          <p><a className="button" href="#popup1">Click</a></p>
         </div>
 
-        <Popup />
+        <Popup nameRef={popupRef}/>   
 
     </div>
   );
