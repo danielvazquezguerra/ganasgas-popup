@@ -1,11 +1,12 @@
 import React from 'react';
 import './Popup.scss';
 
-const Popup = () => {
 
-    
+const Popup = (props) => {
+
   return (
-    <div id="popup1" className="overlay">
+
+    <div ref={props.nameRef}  id="popup1" className="overlay">
 
         <div className="popup">
         
