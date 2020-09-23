@@ -12,7 +12,7 @@ const Popup = (props) => {
         
             <div className="wrapper-up">
 
-                <a className="close" href="#">&times;</a>
+                <a className="close" href="https://ganaenergia.com/tarifas-gas">&times;</a>
 
             </div>
 
